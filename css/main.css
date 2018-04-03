@@ -145,7 +145,6 @@ p {
   margin-bottom: 10px;
   margin-top: 5px;
   line-height: 1.7em;
-  padding-left: 20px;
 }
 
 strong {
@@ -472,6 +471,7 @@ img::-moz-selection {
   }*/
 
   .post img {
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
     border-radius: 3px;
