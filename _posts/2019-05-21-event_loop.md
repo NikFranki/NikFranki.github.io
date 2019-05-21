@@ -2,7 +2,7 @@
 layout: post
 title: "图解event loop"
 date: 2019-05-21
-tag: js
+tag: browser
 ---
 
 # event loop
