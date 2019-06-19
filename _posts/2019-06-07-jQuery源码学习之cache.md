@@ -1,3 +1,10 @@
+---
+layout: post
+title: "jQuery 数据缓存"
+date: 2019-06-07
+tag: jQuery
+---
+
 # jQuery 源码分析 数据缓存
 
 引入缓存的作用

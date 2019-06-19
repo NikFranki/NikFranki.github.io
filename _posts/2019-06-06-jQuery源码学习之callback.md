@@ -134,7 +134,7 @@ locked() // 判断最近的一次是否执行了所有的回调函数
 
 从add 到 fire 主要经过这些方法调用
 
-![](http://ww1.sinaimg.cn/large/a0a52825gy1g40j79uvt9j204v064wef.jpg)
+![](/images/posts/jQuery/jq-add-to-fire.png)
 
 
 
