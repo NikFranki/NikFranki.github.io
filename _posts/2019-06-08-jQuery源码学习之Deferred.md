@@ -11,21 +11,21 @@ tag: jQuery
 
 下面用流程图介绍 Deferred 主要组成部分：
 
-1. jQuery.Deferred 函数主要结构
+- jQuery.Deferred 函数主要结构
 
-    ![](/images/posts/jQuery/jQuery.Deferred-func.png)
+<img src="/images/posts/jQuery/jQuery.Deferred-func.png" style="width: 500px; text-align: left; margin: 0;" />
 
-2. 内部元组的结构
+- 内部元组的结构
 
-    ![](/images/posts/jQuery/tuple.png)
+<img src="/images/posts/jQuery/tuple.png" style="width: 500px; text-align: left; margin: 0;" />
 
-3. 内部 promise 对象的结构
+- 内部 promise 对象的结构
 
-    ![](/images/posts/jQuery/promise.png)
+<img src="/images/posts/jQuery/promise.png" style="width: 500px; text-align: left; margin: 0;" />
 
-4. deferred 对象结构
+- deferred 对象结构
 
-    ![](/images/posts/jQuery/deferred.png)
+<img src="/images/posts/jQuery/deferred.png" style="width: 500px; text-align: left; margin: 0;" />
 
 下面围绕以上的涉及到的方法、属性细化讲解
 
@@ -45,7 +45,7 @@ d.then(function(v) {
 
 流程图为
 
-![](/images/posts/jQuery/deferred-then-resolve.png)
+<img src="/images/posts/jQuery/deferred-then-resolve.png" style="width: 500px; text-align: left; margin: 0;" />
 
 分解流程首先通过
 

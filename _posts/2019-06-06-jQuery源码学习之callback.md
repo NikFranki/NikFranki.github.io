@@ -134,8 +134,7 @@ locked() // 判断最近的一次是否执行了所有的回调函数
 
 从add 到 fire 主要经过这些方法调用
 
-![](/images/posts/jQuery/jq-add-to-fire.png)
-
+<img src="/images/posts/jQuery/jq-add-to-fire.png" style="width: 300px; text-align: left; margin: 0;" />
 
 
 self上的add方法可以单独拿来说说
