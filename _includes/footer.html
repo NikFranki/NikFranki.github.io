@@ -1,13 +1,14 @@
 <section class="footer">
-    <footer>
-        <div class = "footer_div">
-        <nav class="cover-navigation navigation--social">
-          <ul class="navigation">
+  <footer>
+    <div class="footer_div">
+      <nav class="cover-navigation navigation--social">
+        <ul class="navigation">
 
           {% if site.social.github %}
           <!-- Github -->
           <li class="navigation__item_social">
-            <a href="https://github.com/{{site.social.github}}" title="@{{site.social.github}} 的 Github" target="_blank">
+            <a href="https://github.com/{{site.social.github}}" title="@{{site.social.github}} 的 Github"
+              target="_blank">
               <i class='social fa fa-github fa-2x'></i>
               <span class="label">Github</span>
             </a>
@@ -34,19 +35,20 @@
           </li>
           {% endif %}
 
-          </ul>
-        </nav>
+        </ul>
+      </nav>
 
-        </div>
+    </div>
 
-        <div class = "footer_div">
-           <p class="copyright text-muted">
-            Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }} Theme by <a href="https://nikfranki.github.io/">franki</a>
-            </p>
-        	<div align="right">
-    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-        </div>
-        <div>
-    </footer>
+    <div class="footer_div">
+      <p class="copyright text-muted">
+        Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }} Theme by <a
+          href="https://nikfranki.github.io/">franki</a>
+      </p>
+      <div align="right">
+        <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      </div>
+    <div>
+    <div><span id="busuanzi_container_site_pv">本站总访问量：<span id="busuanzi_value_site_pv"></span>次</span></div>
+  </footer>
 </section>
