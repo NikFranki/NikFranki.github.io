@@ -1,58 +1,92 @@
-# Basic
-title: franki
-subtitle: 个人站
-description: 欢迎来到我的个人站~
-# 头像里面的标题
-avatarTitle: franki
-# 头像里面的描述
-avatarDesc: H5 / 前端博客
-url: "https://nikfranki.github.io/"
+# Site settings
+title: franki Blog
+SEOTitle: franki的博客 | franki Blog
+header-img: images/home-bg.jpg
+email: 8024ldbryant@gmail.com
+description: ""
+keyword: ""
+url: "https://nikfranki.github.io/"              # your host, for absolute URL
+baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
-# Comment
-comment:
-    disqus: franki
-    # uyan: 2143225  # 有言id,登录有言官网申请
 
-# Social
-social:
-    github: NikFranki
-    twitter: 8024ldbryant
-    mail: 8024ldbryant@gmail.com
 
-# 百度统计
-# 使用博客模板请去掉或者更换 id
-baidu:
-    id: cfcf55bfd5654ebfcc52610f6fc31271
+# SNS settings
+RSS: false
+github_username:    NikFranki
+twitter_username:   franki
 
-# Google Analytics
-# 使用博客模板请去掉或者更换 id
-ga:
-    id: UA-140814370-2
-    host: auto
 
-permalink: /:year/:month/:title/
-# Format
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
-
-textColor: #FF0000
-
-# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: clear
-
-# The blog button should not be removed.
-blog_button:
-    title: 博客主页
-
-# Navigation buttons in the front page.s
-nav:
-    - {title: 所有文章, description: archive, url: '/archive'}
-    - {title: 标签, description: tags, url: '/tags'}
-    - {title: 关于我, description: about, url: '/about'}
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
-# Pagination
-gems: [jekyll-paginate,jekyll-sitemap]
-paginate: 20
-paginate_path: "page/:num/"
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+plugins: [jekyll-paginate]
 
 
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+# Disqus settings
+# disqus_username: franki
+gittalk_username: franki
+
+gitalk:
+  enable: true
+  owner: NikFranki
+  repo: NikFranki.github.io
+  clientID: 443bd50b5dc38dabd3fe
+  clientSecret: b181c87fcc20931f09f1ea94506add799fb8b16d
+  admin: NikFranki
+
+# Duoshuo settings
+# duoshuo_username: user_name
+# Share component is depend on Comment so we can NOT use share only.
+# duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id: cfcf55bfd5654ebfcc52610f6fc31271
+# Google Analytics
+ga_track_id: 'UA-140814370-2'            # Format: UA-xxxxxx-xx
+ga_domain: auto
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "学如逆水行舟，不进则退"
+sidebar-avatar: /images/avatar-franki.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Friends
+# friends: [
+#     {
+#         title: "Hux Blog",
+#         href: "http://huangxuan.me"
+#     }
+# ]

@@ -1,8 +1,14 @@
 ---
-layout: post
-title: 'jQuery Deferred'
-date: 2019-06-08
-tag: jQuery
+layout:     post
+title:      "jQuery Deferred"
+subtitle:   ""
+date:       2019-06-08
+author:     "franki"
+header-img: "images/post-bg-js-module.jpg"
+tags:
+    - 前端开发
+    - jQuery
+    - 源码分析
 ---
 
 在 es6 promise 还未全面普及的情况下，jQuery 的 Deferred 是很好用来解决耗时操作任务(setTimeout、ajax 等)，deferred 字面意思是递延、延迟的意思。常见的耗时的操作或者说异步操作都是通过回调函数处理返回的结果，利用返回的结果在回调函数做其他的操作，若是有超过两个的异步操作，且每一步都依赖上一步的异步任务完成的情况下，就会产生我们常说的回调地狱问题。
@@ -13,19 +19,19 @@ tag: jQuery
 
 - jQuery.Deferred 函数主要结构
 
-<img src="/images/posts/jQuery/jQuery.Deferred-func.png" style="width: 500px; text-align: left; margin: 0;" />
+![jQuery.Deferred-func](/images/posts/jQuery/jQuery.Deferred-func.png)
 
 - 内部元组的结构
 
-<img src="/images/posts/jQuery/tuple.png" style="width: 500px; text-align: left; margin: 0;" />
+![tuple](/images/posts/jQuery/tuple.png)
 
 - 内部 promise 对象的结构
 
-<img src="/images/posts/jQuery/promise.png" style="width: 500px; text-align: left; margin: 0;" />
+![promise](/images/posts/jQuery/promise.png)
 
 - deferred 对象结构
 
-<img src="/images/posts/jQuery/deferred.png" style="width: 500px; text-align: left; margin: 0;" />
+![deferred](/images/posts/jQuery/deferred.png)
 
 下面围绕以上的涉及到的方法、属性细化讲解
 
@@ -45,7 +51,7 @@ d.then(function(v) {
 
 流程图为
 
-<img src="/images/posts/jQuery/deferred-then-resolve.png" style="width: 500px; text-align: left; margin: 0;" />
+![deferred-then-resolve](/images/posts/jQuery/deferred-then-resolve.png)
 
 分解流程首先通过
 
@@ -270,11 +276,11 @@ resolve 调用
 
 ```javascript
 deferred[tuple[0]] = function() {
-	deferred[tuple[0] + 'With'](
-		this === deferred ? undefined : this,
-		arguments
-	);
-	return this;
+    deferred[tuple[0] + 'With'](
+        this === deferred ? undefined : this,
+        arguments
+    );
+    return this;
 };
 
 // deferred.notifyWith = list.fireWith

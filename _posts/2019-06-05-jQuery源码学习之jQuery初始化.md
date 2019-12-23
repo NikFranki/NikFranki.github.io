@@ -1,15 +1,24 @@
 ---
-layout: post
-title: "jQuery 初始化"
-date: 2019-06-05
-tag: jQuery
+layout:     post
+title:      "jQuery 初始化"
+subtitle:   ""
+date:       2019-06-05
+author:     "franki"
+header-img: "images/post-bg-js-module.jpg"
+tags:
+    - 前端开发
+    - jQuery
+    - 源码分析
 ---
 
-# jQuery初始化
+* 目录  
+{:toc #markdown-toc}
 
-<code>jQuery</code> 风靡多时，在前端历史有着举足轻重的影响，<code>jQuery</code>本着<code>write less，do more</code>，把广大开发者带进了新的世界，<b>选择器、<code>dom</code>操作、<code>css</code>处理、事件、<code>ajax</code>、动画队列</b>是<code>jQuery</code>最为出彩的部分。前端如今变幻莫测，<code>react</code>、<code>vue</code>、<code>angular</code>三驾马车并趋前行、大行其道，回想当年，<code>jQuery</code>有过之而不过及，每个历史时期都会出现新的框架。作为一个前端开发者，框架的出现帮我们更好地完成工作，现今使用的框架迟早有一天会被淘汰，但是有个东西却不会淘汰，那就是这些框架留下的<b>思想</b>，这就要求我们做到知其然更知其所以然。这也是为什么要学习<code>jQuery</code>源码的原因了。
+## jQuery初始化
 
-## jquery 是如何初始化的？
+``jQuery`` 风靡多时，在前端历史有着举足轻重的影响，``jQuery``本着``write less，do more``，把广大开发者带进了新的世界，选择器、``dom``操作、``css``处理、事件、``ajax``、动画队列是``jQuery``最为出彩的部分。前端如今变幻莫测，``react``、``vue``、``angular``三驾马车并趋前行、大行其道，回想当年，``jQuery``有过之而不过及，每个历史时期都会出现新的框架。作为一个前端开发者，框架的出现帮我们更好地完成工作，现今使用的框架迟早有一天会被淘汰，但是有个东西却不会淘汰，那就是这些框架留下的思想，这就要求我们做到知其然更知其所以然。这也是为什么要学习``jQuery``源码的原因了。
+
+## jquery 是如何初始化的
 
 最基本的jquery初始化代码
 
@@ -75,8 +84,8 @@ tag: jQuery
 
 ```
 
-<code>jQuery</code>的初始化很有意思，并不是像大多数框架、工具一样直接在调用的时候直接调用<code>new</code>去创建一个实例，而是通过内部的<code>init</code>方法，使用类似工厂的概念去实例化一个<code>jQuery</code>对象，从而使的导出来的jQuery赋予<code>jQuery.fn</code>上的所有属性和方法，很巧妙。
+``jQuery``的初始化很有意思，并不是像大多数框架、工具一样直接在调用的时候直接调用``new``去创建一个实例，而是通过内部的``init``方法，使用类似工厂的概念去实例化一个``jQuery``对象，从而使的导出来的jQuery赋予``jQuery.fn``上的所有属性和方法，很巧妙。
 
 ## 结语
 
-这是<code>jQuery</code>源码学习的起始篇，往后会深入探讨<code>jQuery</code>其他优秀思想，未完待续！
+这是``jQuery``源码学习的起始篇，往后会深入探讨``jQuery``其他优秀思想，未完待续！

@@ -4,4 +4,4 @@
 
 #### 感谢
 
-本博客在[Vno Jekyll](https://github.com/onevcat/vno-jekyll)基础上修改的。
+本博客在[Hux Blog](https://github.com/Huxpro/huxpro.github.io)基础上修改的。

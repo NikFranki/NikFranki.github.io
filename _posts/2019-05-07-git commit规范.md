@@ -1,69 +1,66 @@
 ---
-layout: post
-title: "git commit 提交规范"
-date: 2019-05-07
-tag: git
+layout:     post
+title:      "git commit 提交规范"
+subtitle:   ""
+date:       2019-05-07
+author:     "franki"
+header-img: "images/post-bg-js-module.jpg"
+tags:
+    - git
+    - git flow
+    - 代码规范
 ---
 
-## git commit信息规范：
+* 目录  
+{:toc #markdown-toc}
 
+## git commit信息规范
 
+* Angular团队规范
 
-- Angular团队规范
-
-  ```
-  <type>(<scope>): <subject>
-  <BLANK LINE>
-  <body>
-  <BLANK LINE>
-  <footer>
-  ```
-
-  
+```js
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
 
 通过vim界面编写填写的最终结果如上所示，大致分为三个部分(使用空行分割)
 
-- 标题行：必填，描述具体的类型和内容
-- 主题内容：描述为什么修改，做了什么样的修改，以及开发的思路
-- 页脚注释：放Breaking changes 或者 Close issues
-
-
+* 标题行：必填，描述具体的类型和内容
+* 主题内容：描述为什么修改，做了什么样的修改，以及开发的思路
+* 页脚注释：放Breaking changes 或者 Close issues
 
 分别由下面的部分组成
 
-- type: commit 的类型
-- feat: 新特性
-- fix: 修复bug
-- refactor: 代码重构
-- docs: 文档修改
-- style: 代码格式修改，(注意不是css的修改)
-- test: 测试用例修改
-- chore: 其他修改，比如构建流程，依赖管理
-- scope: commit 影响范围，比如：route，component，utils，build...
-- subject: commit 描述，建议符合 50/70 formatting
-- body: commit 具体修改内容，可以分为多行，建议 50/70 formatting
-- footer: 一些备注，通常是一些breaking change 或 修复的bug的链接
-
-
+* type: commit 的类型
+* feat: 新特性
+* fix: 修复bug
+* refactor: 代码重构
+* docs: 文档修改
+* style: 代码格式修改，(注意不是css的修改)
+* test: 测试用例修改
+* chore: 其他修改，比如构建流程，依赖管理
+* scope: commit 影响范围，比如：route，component，utils，build...
+* subject: commit 描述，建议符合 50/70 formatting
+* body: commit 具体修改内容，可以分为多行，建议 50/70 formatting
+* footer: 一些备注，通常是一些breaking change 或 修复的bug的链接
 
 git commit 模板
 
-
-
 如果是个人项目的话，抑或你想尝试下如此的规范，那么你可以为git设置commit template，每次git commit的时候在vim带出，时刻提醒自己
-
-
 
 修改 ~/.gitconfig, 添加：
 
-```
+```bash
 [commit]
 template = ~/.gitmessage
 ```
 
 新建~/.gitmessage 编写以下
 
-```
+```bash
 # head: <type>(<scope>): <subject>
 # - type: feat, fix, docs, style, refactor, test, chore
 # - scope: can be empty (eg. if the change is a global or difficult to assign a single component)
@@ -79,8 +76,6 @@ template = ~/.gitmessage
 # - BREAKING CHANGE
 #
 ```
-
-
 
 Commitizen: 替代你的git commit
 
@@ -151,8 +146,6 @@ or
 
 同时在~/ 或项目目录下创建 .cz-config.js 文件
 
-
-
 ## Commitlint: 校验你的 message
 
 [commitlint](https://link.zhihu.com/?target=https%3A//github.com/marionebl/commitlint): 可以帮助我们 lint commit messages, 如果我们提交的不符合指向的规范, 直接拒绝提交, 比较狠.
@@ -220,8 +213,6 @@ package.json 中添加:
 
 ![img](https://pic1.zhimg.com/80/v2-73ad405e2323eeebcfd0e4ded3146444_hd.jpg)
 
-
-
 ## standard-version: 自动生成 CHANGELOG
 
 通过以上工具的帮助, 我们的工程 commit message 应该是符合 Angular团队那套, 这样也便于我们借助 [standard-version](https://link.zhihu.com/?target=https%3A//github.com/conventional-changelog/standard-version) 这样的工具, 自动生成 CHANGELOG, 甚至是 语义化的版本号([Semantic Version](https://link.zhihu.com/?target=http%3A//semver.org/lang/zh-CN/)).
@@ -243,8 +234,6 @@ package.json 配置:
 
 PS: standard-version 有很多其他的特性, 这里不过多涉及, 有兴趣的同学自行尝试.
 
-
-
 ## 最后
 
-commit message 的规范性很重要, 但是是否需要像本文这样强制限制, 每个团队和个人都有自己的想法, 但是个人认为: 好的习惯, 受益终身.
+commit message 的规范性很重要, 但是是否需要像本文这样强制限制, 每个团队和个人都有自己的想法, 但是个人认为: 好的习惯, 受益终身。

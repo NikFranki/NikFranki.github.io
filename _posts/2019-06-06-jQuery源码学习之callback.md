@@ -1,9 +1,16 @@
 ---
-layout: post
-title: "jQuery Callbacks"
-date: 2019-06-06
-tag: jQuery
+layout:     post
+title:      "jQuery Callbacks"
+subtitle:   ""
+date:       2019-06-06
+author:     "franki"
+header-img: "images/post-bg-js-module.jpg"
+tags:
+    - 前端开发
+    - jQuery
+    - 源码分析
 ---
+
 
 jQuery Callbacks 是一个多用途的回调函数列表对象，提供一个强大的方法来管理回调函数队列
 
@@ -11,19 +18,19 @@ jQuery Callbacks 是一个多用途的回调函数列表对象，提供一个强
 
 etc
 
-```javascript
+```js
 function dowithList (List, cb) {
-	setTimeout(function() {
-		var task = List.shift();
-		task();
-		if (List.length > 0) {
-			setTimeout(function() {
-				dowithList(List, cb);
-			}, 1000);
-		} else {
-			cb && cb();
-		}
-	}, 25);
+  setTimeout(function() {
+    var task = List.shift();
+    task();
+    if (List.length > 0) {
+      setTimeout(function() {
+        dowithList(List, cb);
+      }, 1000);
+    } else {
+      cb && cb();
+    }
+  }, 25);
 }
 
 dowithList([
@@ -35,13 +42,13 @@ dowithList([
 
 jQuery提供给我们的方式：
 
-```javascript
+```js
 var callbacks = $.Callbacks();
 var a = function() {
-	console.log('a');
+  console.log('a');
 };
 var b = function() {
-	console.log('b');
+  console.log('b');
 };
 callbacks.add(a);
 callbacks.add(b);
@@ -53,23 +60,23 @@ callbacks.fire();
 
 整体思想依靠pub/sub(发布订阅的模式)来管理回调函数队列的添加与触发执行的操作。
 
-```javascript
+```js
 // 最简单的pub/sub
 var Observer = {
-	list: [],
-	sub: function(fn) {
-		this.list.push(fn);
-	},
-	pub: function(value) {
-		for (var i=0; i<this.list.length; i++) {
-			this.list[i](value);
-		}
-	}
+  list: [],
+  sub: function(fn) {
+    this.list.push(fn);
+  },
+  pub: function(value) {
+    for (var i=0; i<this.list.length; i++) {
+      this.list[i](value);
+    }
+  }
 }
 
 // test
 var a = function(value) {
-	console.log('a: ', value);
+  console.log('a: ', value);
 }
 Observer.sub(a);
 Observer.pub(1);
@@ -79,7 +86,7 @@ Observer.pub(1);
 
 jQuery 里面Callbacks实现的代码也很少，主要以下代码：
 
-```javascript
+```js
 jQuery.Callbacks = function(optisons) {
   // Convert options from String-formatted to Object-formatted if needed
   // (we check in cache first)
@@ -87,7 +94,7 @@ jQuery.Callbacks = function(optisons) {
     createOptions( options ) :
     jQuery.extend( {}, options );
   
-  	var // Flag to know if list is currently firing
+    var // Flag to know if list is currently firing
       firing,
 
       // Last fire value for non-forgettable lists
@@ -121,7 +128,7 @@ jQuery.Callbacks = function(optisons) {
 
 jQuery.Callbacks返回了一个对象，里面封装回调对象队列一系列的处理逻辑。总结下主要是以下方法
 
-```
+```js
 add(fn | arr) // 添加函数到回调队列
 fire(value) // 触发回调队列函数的执行的触发函数
 remove(fn) // 从回调队列中去掉某条数据
@@ -134,12 +141,11 @@ locked() // 判断最近的一次是否执行了所有的回调函数
 
 从add 到 fire 主要经过这些方法调用
 
-<img src="/images/posts/jQuery/jq-add-to-fire.png" style="width: 300px; text-align: left; margin: 0;" />
-
+![jq-add-to-fire](/images/posts/jQuery/jq-add-to-fire.png)
 
 self上的add方法可以单独拿来说说
 
-```javascript
+```js
 add: function() {
   if ( list ) {
 
@@ -153,7 +159,7 @@ add: function() {
       jQuery.each( args, function( _, arg ) {
         if ( isFunction( arg ) ) {
           if ( !options.unique || !self.has( arg ) ) {
-          	list.push( arg );
+            list.push( arg );
           }
         } else if ( arg && arg.length && toType( arg ) !== "string" ) {
 
@@ -164,7 +170,7 @@ add: function() {
     } )( arguments );
 
     if ( memory && !firing ) {
-    	fire();
+      fire();
     }
   }
   return this;
@@ -173,11 +179,9 @@ add: function() {
 
 现在对上面的代码稍微进行说明，里面有个立即执行的函数，作用是接收外面传入的`arguemtns`，可以接收单个函数，也可以是函数数组，把接收的值push入list回调队列。
 
-
-
 下面继续分析fire方法
 
-```javascript
+```js
 // 首先是self 的 fire
 // Call all the callbacks with the given arguments
 var self = {
@@ -193,7 +197,7 @@ var self = {
     }
     return this;
   },
-	fire: function() {
+  fire: function() {
     self.fireWith( this, arguments );
     return this;
   },
@@ -251,7 +255,7 @@ fire = function() {
 
 fireWith的作用是接收参数，放入queue，这个queue在外层fire中会使用到，主要是给list回调队列里的函数作为参数传递出去，这样之前add进来的函数，就可以触发了，触发的动作是：
 
-```javascript
+```js
 // Run callback and check for early termination
 if ( list[ firingIndex ].apply( memory[ 0 ], memory[ 1 ] ) === false &&
 options.stopOnFalse ) {
@@ -262,20 +266,18 @@ options.stopOnFalse ) {
 }
 ```
 
-
-
 $.Callbacks('once')
 
 确保这个回调队列的函数只执行一次
 
 ```javascript
 var foo = function(value) {
-	console.log('foo: ' + value);
+  console.log('foo: ' + value);
 };
 
 // another function to also be added to the list
 var bar = function(value) {
-	console.log('bar: ' + value);
+  console.log('bar: ' + value);
 };
 
 var callbacks = $.Callbacks('once');
@@ -316,7 +318,7 @@ $.Callbacks('unique') 确保一次只能添加一个回调
 
 ```javascript
 var foo = function(value) {
-	console.log('foo: ' + value);
+  console.log('foo: ' + value);
 };
 
 var callbacks = $.Callbacks();
@@ -327,7 +329,7 @@ callbacks.fire('hello');
 
 下面附上Callbacks的源码:
 
-```
+```js
 jQuery.Callbacks = function( options ) {
 
     // Convert options from String-formatted to Object-formatted if needed
@@ -491,7 +493,7 @@ jQuery.Callbacks = function( options ) {
                 }
                 return this;
             },
-            
+
             locked: function() {
                 return !!locked;
             },
