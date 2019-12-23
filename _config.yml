@@ -50,9 +50,10 @@ gitalk:
   enable: true
   owner: NikFranki
   repo: NikFranki.github.io
-  clientID: 443bd50b5dc38dabd3fe
-  clientSecret: b181c87fcc20931f09f1ea94506add799fb8b16d
+  clientID: af4ef8a1d26abfe96d1c
+  clientSecret: 54c0d54b00da8bd3b234ab09476151519df44af2
   admin: NikFranki
+  id: window.location.pathname
 
 # Duoshuo settings
 # duoshuo_username: user_name
