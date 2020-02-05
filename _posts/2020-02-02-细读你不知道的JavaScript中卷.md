@@ -7,7 +7,7 @@ author:     "franki"
 header-img: "images/posts/javascript/you-dont-javascript-1.jpg"
 tags:
   - 前端开发
-  - javascript
+  - JavaScript
 ---
 
 * 目录  
