@@ -275,3 +275,31 @@ layout: default
     }
 </style>
 {% endif %}
+
+<!-- Img Modal -->
+<script>
+    function createImgModal(src) {
+        const nodeStr = '<div class="img-modal-container">' +
+                            '<div class="mask"></div>' +
+                            '<img class="post-img" src=' + src + ' alt="img" />' +
+                        '</div>'
+        var div = $(nodeStr);
+        $('body').append(div);
+    }
+
+    $(document).ready(function() {
+        $('img').click(function(e) {
+            e.stopPropagation(); 
+            console.log($(this)[0]['src']);
+            createImgModal($(this)[0]['src']);
+        });
+
+        $(document).click(function(){
+            $(".img-modal-container").remove();
+        });
+
+        $(document).scroll(function(){
+            $(".img-modal-container").remove();
+        });
+    });
+</script>
