@@ -1258,6 +1258,28 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 80%;
+    width: auto;
     transform: translate(-50%, -50%);
+}
+
+#markdown-toc.pc {
+    position: fixed;
+    top: 500px;
+    left: 72%;
+    z-index: 5;
+    max-height: 600px;
+    overflow: auto;
+}
+
+#markdown-toc.pc.fixed {
+    top: 65px;
+}
+
+#markdown-toc.pc a {
+    display: block;
+}
+
+#markdown-toc.pc a.list_click {
+    color: #007fff;
+    background-color: #ebedef;
 }

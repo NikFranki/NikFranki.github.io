@@ -278,28 +278,86 @@ layout: default
 
 <!-- Img Modal -->
 <script>
-    function createImgModal(src) {
-        const nodeStr = '<div class="img-modal-container">' +
-                            '<div class="mask"></div>' +
-                            '<img class="post-img" src=' + src + ' alt="img" />' +
-                        '</div>'
-        var div = $(nodeStr);
-        $('body').append(div);
-    }
+    (function() {
+        const ipad_pro_width = 1024;
+        var is_mobile = /Android|iPhone|SymbianOS|Windows Phone|iPad|iPod/g.test(navigator.userAgent);
+        var is_pc = !is_mobile && $('body').width() > ipad_pro_width;
+        if (!is_pc) {
+            return;
+        }
+        function createImgModal(src) {
+            const nodeStr = '<div class="img-modal-container">' +
+                                '<div class="mask"></div>' +
+                                '<img class="post-img" src=' + src + ' alt="img" />' +
+                            '</div>'
+            var div = $(nodeStr);
+            $('body').append(div);
+        }
 
-    $(document).ready(function() {
-        $('img').click(function(e) {
-            e.stopPropagation(); 
-            console.log($(this)[0]['src']);
-            createImgModal($(this)[0]['src']);
-        });
+        $(document).ready(function() {
+            $('img').click(function(e) {
+                e.stopPropagation(); 
+                console.log($(this)[0]['src']);
+                createImgModal($(this)[0]['src']);
+            });
 
-        $(document).click(function(){
-            $(".img-modal-container").remove();
-        });
+            $(document).click(function(){
+                $(".img-modal-container").remove();
+            });
 
-        $(document).scroll(function(){
-            $(".img-modal-container").remove();
+            $(document).scroll(function(){
+                $(".img-modal-container").remove();
+            });
         });
-    });
+    })();
+</script>
+
+<!-- catelog -->
+<script>
+    (function() {
+        const ipad_pro_width = 1024;
+        var is_mobile = /Android|iPhone|SymbianOS|Windows Phone|iPad|iPod/g.test(navigator.userAgent);
+        var is_pc = !is_mobile && $('body').width() > ipad_pro_width;
+        if (!is_pc) {
+            return;
+        }
+        $('#markdown-toc').addClass('pc');
+        var INIT_TOC_HEIGHT = $('.intro-header').height() + 50;
+        $('body').ready(function(params) {
+            $('#markdown-toc').attr("style", 'top:' + INIT_TOC_HEIGHT + 'px;');
+            locateCatelogList();
+        });
+        function locateCatelogList(event) {
+            // article 目录集合
+            var alis = $('article :header');
+            // 侧边栏目录集合
+            var sidebar_alis = $('#markdown-toc').find('a');
+            // 获取滚动条到顶部的距离
+            var scroll_height = $(window).scrollTop();
+            for (var i = 0; i < alis.length; i++) {
+                var a_height = Math.floor($(alis[i]).offset().top);
+                // 滚动的位置大于当前标题距离顶部的位置
+                if (a_height <= scroll_height) {
+                    sidebar_alis.removeClass('list_click');
+                    $(sidebar_alis[i]).addClass('list_click');
+                }
+                // 滚动条滚动的高度小于第一个标题距离顶部的位置
+                if (scroll_height <= $(alis[0]).offset().top) {
+                    sidebar_alis.removeClass('list_click');
+                    $(sidebar_alis[0]).addClass('list_click');
+                }
+            }
+            if (scroll_height < INIT_TOC_HEIGHT) {
+                $('#markdown-toc').removeClass('fixed');
+                const posTop = INIT_TOC_HEIGHT - scroll_height + 'px;';
+                $('#markdown-toc').attr("style", 'top:' + posTop);
+            } else {
+                $('#markdown-toc').removeAttr("style");
+                $('#markdown-toc').addClass('fixed');
+            }
+        }
+        $(function() {
+            $(window).bind('scroll', locateCatelogList); 
+        });
+    })();
 </script>
