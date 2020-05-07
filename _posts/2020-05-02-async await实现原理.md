@@ -5,6 +5,7 @@ subtitle:   ""
 date:       2020-05-02
 author:     "franki"
 header-img: "images/posts/async-await/async-await.png"
+catalog: true
 tags:
     - async await
 ---

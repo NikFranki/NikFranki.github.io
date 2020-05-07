@@ -5,13 +5,11 @@ subtitle:   ""
 date:       2018-06-14
 author:     "franki"
 header-img: "images/post-bg-js-module.jpg"
+catalog: true
 tags:
     - 前端开发
     - JavaScript
 ---
-
-* 目录  
-{:toc #markdown-toc}
 
 前端在变，框架在变，但有个东西永远都不会过时，那就是掌握了javascript，才能更好掌控未来
 

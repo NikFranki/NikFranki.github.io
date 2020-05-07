@@ -5,13 +5,11 @@ subtitle:   "发现未知"
 date:       2020-01-20
 author:     "franki"
 header-img: "images/posts/javascript/you-dont-javascript-1.jpg"
+catalog: true
 tags:
   - 前端开发
   - JavaScript
 ---
-
-* 目录
-{:toc #markdown-toc}
 
 ## 第一部分 作用域和闭包
 

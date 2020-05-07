@@ -5,14 +5,12 @@ subtitle:   ""
 date:       2019-05-07
 author:     "franki"
 header-img: "images/post-bg-js-module.jpg"
+catalog: true
 tags:
     - git
     - git flow
     - 代码规范
 ---
-
-* 目录  
-{:toc #markdown-toc}
 
 ## git commit信息规范
 

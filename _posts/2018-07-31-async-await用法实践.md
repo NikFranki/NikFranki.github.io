@@ -5,14 +5,12 @@ subtitle:   ""
 date:       2018-07-31
 author:     "franki"
 header-img: "images/post-bg-js-module.jpg"
+catalog: true
 tags:
     - 前端开发
     - ES7
     - JavaScript
 ---
-
-* 目录  
-{:toc #markdown-toc}
 
 解决回调难题，优化promise
 

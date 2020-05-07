@@ -5,12 +5,10 @@ subtitle:   ""
 date:       2020-04-20
 author:     "franki"
 header-img: "images/post-bg-js-module.jpg"
+catalog: true
 tags:
     - Generator
 ---
-
-* 目录
-{:toc #markdown-toc}
 
 最近事情有点多，博客已经减少到一个月一篇了，作为一个对于技术有持续追求的人来说，学无止境应该是每一个技术人的座右铭！应该像岳飞背上’精忠报国‘的四个大字一样，时刻警示告知自己，再忙也不能忘记给自己充电。不过无论如何，饭还得一口一口吃，不能一口气吃成一个大胖子。
 

@@ -5,14 +5,12 @@ subtitle:   ""
 date:       2019-05-21
 author:     "franki"
 header-img: "images/post-bg-js-module.jpg"
+catalog: true
 tags:
     - 前端开发
     - js事件循环机制
     - browser
 ---
-
-* 目录  
-{:toc #markdown-toc}
 
 ## event loop
 

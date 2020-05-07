@@ -5,14 +5,12 @@ subtitle:   ""
 date:       2019-06-05
 author:     "franki"
 header-img: "images/post-bg-js-module.jpg"
+catalog: true
 tags:
     - 前端开发
     - jQuery
     - 源码分析
 ---
-
-* 目录  
-{:toc #markdown-toc}
 
 ## jQuery初始化
 

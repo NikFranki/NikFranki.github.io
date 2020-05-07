@@ -5,14 +5,12 @@ subtitle:   ""
 date:       2019-12-20
 author:     "franki"
 header-img: "images/post-bg-js-module.jpg"
+catalog: true
 tags:
     - 前端开发
     - 源码分析
     - lodash
 ---
-
-* 目录  
-{:toc #markdown-toc}
 
 > 好的实现总是让人向往
 

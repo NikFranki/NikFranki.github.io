@@ -5,13 +5,11 @@ subtitle:   ""
 date:       2018-05-11
 author:     "franki"
 header-img: "images/post-bg-js-module.jpg"
+catalog: true
 tags:
     - 前端开发
     - JavaScript
 ---
-
-* 目录  
-{:toc #markdown-toc}
 
 每个开发者常常会遇到需求三不五时地变更，对于代码的改动也是非常频繁的，这个时候代码的健壮性、可读性就异常重要了，推倒重来的做法无疑是最低效的。
 

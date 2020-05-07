@@ -5,14 +5,13 @@ subtitle:   "抽丝剥茧"
 date:       2020-02-21
 author:     "franki"
 header-img: "images/posts/virtual-dom/virtual-dom.png"
+catalog: true
+catalog: true
 tags:
     - 前端开发
     - 源码分析
     - virtual dom
 ---
-
-* 目录  
-{:toc #markdown-toc}
 
 从事前端开发工作以来，一直使用 React 作为首选框架，熟练使用没问题，然而却只限于用的地步，对于其核心精髓 **virtual dom**，也就是听过，知道一些概念性的理念，只限于此。早就有想法，进入其真实世界，抽丝剥茧，今天就好好尝试从零到一实现一个极简的 **virtual dom**。
 
