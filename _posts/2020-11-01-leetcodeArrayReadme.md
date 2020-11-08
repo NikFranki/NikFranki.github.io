@@ -7,7 +7,8 @@ author:     "franki"
 header-img: ""
 catalog: true
 tags:
-    - array
+    - leetcode
+    - Array
 ---
 
 ## 数组
