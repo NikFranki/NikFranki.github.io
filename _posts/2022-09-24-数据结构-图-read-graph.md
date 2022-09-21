@@ -10,7 +10,6 @@ tags:
     - Graph
 ---
 
-
 ## 读取一张图
 
 使用 nodejs 本身自带的文件读取模块 read-line
