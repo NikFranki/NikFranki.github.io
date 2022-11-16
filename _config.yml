@@ -60,5 +60,11 @@ sidebar-avatar: /images/avatar-franki.jpg # use absolute URL, seeing it's used i
 featured-tags: true # whether or not using Feature-Tags
 featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
 
+future: true
+
 # Friends
-friends: [{ title: '廖帅', href: 'http://www.sysuleo.com/' }, { title: '麦经理', href: 'https://maiyong.github.io/' }]
+friends:
+    [
+        { title: '廖帅', href: 'http://www.sysuleo.com/' },
+        { title: '麦经理', href: 'https://maiyong.github.io/' },
+    ]
