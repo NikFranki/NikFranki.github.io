@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "Node.js 实战笔记 - chapter13"
-date:       2023-02-14
+title:      "SQL learning - chapter1"
+date:       2023-02-16
 subtitle:   ""
 author:     "franki"
 header-img: ""
