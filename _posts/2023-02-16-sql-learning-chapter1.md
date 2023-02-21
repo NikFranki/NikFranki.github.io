@@ -7,8 +7,8 @@ author:     "franki"
 header-img: ""
 catalog: true
 tags:
-    - Node.js
-    - BackEnd
+    - SQL
+    - MySQL
 ---
 
 # 第1课 了解 SQL

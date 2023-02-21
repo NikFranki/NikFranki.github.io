@@ -7,8 +7,8 @@ author:     "franki"
 header-img: ""
 catalog: true
 tags:
-    - Node.js
-    - BackEnd
+    - SQL
+    - MySQL
 ---
 
 # 第6课 用通配符进行过滤
