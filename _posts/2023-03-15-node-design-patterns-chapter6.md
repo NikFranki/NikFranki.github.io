@@ -13,4 +13,7 @@ tags:
 
 ### Node.js Design Patterns chapter6
 
-![chapter6](https://cdn.nlark.com/yuque/0/2023/jpeg/186802/1679738183254-b0fbce93-244d-4191-aef9-1e760c2c3975.jpeg)
+![chapter6](http://qiniu.sevenyuan.cn/node-design-patterns-chapter6.jpeg)
+
+代码实现：
+[chapter5 code](https://github.com/NikFranki/node-design-patterns/blob/master/chapter6/1-gzip-buffer-vs-stream/gzip-buffer.js)
