@@ -13,4 +13,7 @@ tags:
 
 ### Node.js Design Patterns chapter2
 
-![chapter2](https://cdn.nlark.com/yuque/0/2023/jpeg/186802/1678515441395-7b151dfc-bff0-473a-95cc-2ff77af8ce8d.jpeg)
+![chapter2](http://qiniu.sevenyuan.cn/node-design-patterns-chapter2.jpeg)
+
+代码实现：
+[chapter2 code](https://github.com/NikFranki/node-design-patterns/blob/master/chapter2/file-main.js)
