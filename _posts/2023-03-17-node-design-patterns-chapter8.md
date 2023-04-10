@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Node.js Design Patterns chapter7"
+title:      "Node.js Design Patterns chapter8"
 date:       2023-03-17
 subtitle:   ""
 author:     "franki"
