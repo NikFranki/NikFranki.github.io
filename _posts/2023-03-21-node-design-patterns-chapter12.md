@@ -13,7 +13,7 @@ tags:
 
 ### Node.js Design Patterns chapter11
 
-![chapter12](http://qiniu.sevenyuan.cn/node-design-patterns-chapter12.jpg)
+![chapter12](/images/posts/node/node-design-patterns-chapter2.jpeg)
 
 代码实现：
 [chapter12 code](https://github.com/NikFranki/node-design-patterns/blob/master/12-scalability-and-architectural-patterns/1-plain-http/app.js)
