@@ -13,7 +13,7 @@ tags:
 
 ### Node.js Design Patterns chapter8
 
-![chapter8](http://qiniu.sevenyuan.cn/node-design-patterns-chapter8.jpg)
+![chapter8](/images/posts/node/node-design-patterns-chapter8.jpeg)
 
 代码实现：
 [chapter8 code](https://github.com/NikFranki/node-design-patterns/blob/master/chapter8/1-proxy-composition/index.js)
