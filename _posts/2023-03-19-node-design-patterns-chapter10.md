@@ -13,7 +13,7 @@ tags:
 
 ### Node.js Design Patterns chapter10
 
-![chapter10](http://qiniu.sevenyuan.cn/node-design-patterns-chapter10.jpg)
+![chapter10](/images/posts/node/node-design-patterns-chapter10.jpeg)
 
 代码实现：
 [chapter10 code](https://github.com/NikFranki/node-design-patterns/blob/master/10-universal-javascript/1-webpack-intro/src/index.js)
