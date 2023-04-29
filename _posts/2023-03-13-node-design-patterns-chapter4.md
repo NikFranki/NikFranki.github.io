@@ -13,7 +13,7 @@ tags:
 
 ### Node.js Design Patterns chapter4
 
-![chapter4](http://qiniu.sevenyuan.cn/node-design-patterns-chapter4.jpeg)
+![chapter4](/images/posts/node/node-design-patterns-chapter4.jpeg)
 
 代码实现：
 [chapter4 code](https://github.com/NikFranki/node-design-patterns/blob/master/chapter4/4.1/4.1.js)
