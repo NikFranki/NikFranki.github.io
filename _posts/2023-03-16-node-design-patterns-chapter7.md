@@ -13,7 +13,7 @@ tags:
 
 ### Node.js Design Patterns chapter7
 
-![chapter7](http://qiniu.sevenyuan.cn/node-design-patterns-chapter7.jpg)
+![chapter7](/images/posts/node/node-design-patterns-chapter7.jpeg)
 
 代码实现：
 [chapter7 code](https://github.com/NikFranki/node-design-patterns/blob/master/chapter7/1-factory-simple/image.js)
