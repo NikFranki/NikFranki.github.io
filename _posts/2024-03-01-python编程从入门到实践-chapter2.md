@@ -1,14 +1,13 @@
 ---
 layout:     post
-title:      "python编程从入门到实践-chapter2"
+title:      "Python 编程从入门到实践-chapter2"
 date:       2024-03-01
 subtitle:   ""
 author:     "franki"
 header-img: ""
 catalog: true
 tags:
-    - Node.js
-    - Design Patterns
+    - Python
 ---
 
 ## 变量和简单的数据类型

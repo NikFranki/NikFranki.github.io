@@ -1,14 +1,13 @@
 ---
 layout:     post
-title:      "python编程从入门到实践-chapter1"
+title:      "Python编程从入门到实践-chapter1"
 date:       2024-02-29
 subtitle:   ""
 author:     "franki"
 header-img: ""
 catalog: true
 tags:
-    - Node.js
-    - Design Patterns
+    - Python
 ---
 
 ### macOS 系统中搭建 Python 编程环境
