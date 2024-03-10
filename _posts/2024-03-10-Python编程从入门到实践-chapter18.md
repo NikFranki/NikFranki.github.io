@@ -40,7 +40,7 @@ my_site$ source ll_env/bin/activate
 my_site(ll_env)$
 ```
 
-![activate-venv](../images/posts/django/activate-venv.png)
+![activate-venv](/images/posts/django/activate-venv.png)
 
 要停止使用虚拟环境，可执行命令 deactivate:
 
@@ -64,7 +64,7 @@ my_site(ll_env)$ pip install django
 my_site(ll_env)$ django-admin startproject my_site_project .
 ```
 
-![alt text](../images/posts/django/startproject.png)
+![alt text](/images/posts/django/startproject.png)
 
 这个末尾（.）让新项目使用合适的目录结构，这样在开发完成后可轻松地将应用程序部署到服务器上
 
@@ -74,7 +74,7 @@ my_site(ll_env)$ django-admin startproject my_site_project .
 my_site(ll_env)$ python manage.py migrate
 ```
 
-![alt text](../images/posts/django/migrate.png)
+![alt text](/images/posts/django/migrate.png)
 
 修改数据库称为迁移数据库
 
@@ -86,7 +86,7 @@ my_site(ll_env)$ python manage.py migrate
 my_site(ll_env)$ python manage.py runserver
 ```
 
-![alt text](../images/posts/django/runserver.png)
+![alt text](/images/posts/django/runserver.png)
 
 ### 创建应用程序
 
@@ -94,7 +94,7 @@ my_site(ll_env)$ python manage.py runserver
 my_site(ll_env)$ python manage.py startapp my_sites
 ```
 
-![alt text](../images/posts/django/startapp.png)
+![alt text](/images/posts/django/startapp.png)
 
 #### 定义模型
 
@@ -142,7 +142,7 @@ INSTALLED_APPS = [
 my_site(ll_env)$ python manage.py makemigrations my_sites
 ```
 
-![alt text](../images/posts/django/makemigrations.png)
+![alt text](/images/posts/django/makemigrations.png)
 
 命令 makemigrations 让 Django 确定如何修改数据库，使其能够存储与前面定义的新模型相关联的数据，生成一份 0001_initial.py 的迁移文件，这个文件将在数据库中为模型 Topic 创建一个表。
 
@@ -193,7 +193,7 @@ admin.site.register(Topic)
 
 访问 `http://localhost:8000/admin/`，输入刚刚创建用户名和密码，将会看到下面的内容
 
-![alt text](../images/posts/django/admin.png)
+![alt text](/images/posts/django/admin.png)
 
 3. 添加主题
 
