@@ -499,3 +499,95 @@ def topics(request):
 现在主页会出现 topics 的链接，点击它，会跳转到 topics 的页面，可以看到
 
 ![alt text](/images/posts/django/topics-page.png)
+
+继续完成特定 topic 下面展示所有条目
+
+首先在 my_sites/urls.py 加入以下内容
+
+```python
+from django.urls import path
+
+from . import views
+
+app_name = 'my_sites'
+urlpatterns = [
+  path('', views.index, name='index'),
+  path('topics/', views.topics, name='topics'),
+  path('topic/<int:topic_id>/', views.topic, name='topic')
+]
+
+```
+
+然后在 my_sites/views.py 加入以下内容
+
+```python
+from django.shortcuts import render
+
+from .models import Topic
+
+# Create your views here.
+
+def index(request):
+  return render(request, 'my_sites/index.html')
+
+def topics(request):
+  """显示所有的主题"""
+  topics = Topic.objects.order_by('date_added')
+  context = {'topics': topics}
+  return render(request, 'my_sites/topics.html', context)
+
+def topic(request, topic_id):
+  """显示特定的主题所有条目"""
+  topic = Topic.objects.get(id=topic_id)
+  entries = topic.entry_set.order_by('-date_added')
+  context = {'topic': topic, 'entries': entries}
+  return render(request, 'my_sites/topic.html', context)
+```
+
+最后 templates/my_stites 新建 topic.html，输入以下内容
+
+```html
+{% extends 'my_sites/base.html' %}
+
+{% block content %}
+  <p>Topic: {{ topic.text }}</p>
+
+  <ul>
+    {% for entry in entries %}
+      <li>
+        <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+        <p>{{ entry.text|linebreaks }}</p>
+      </li>
+    {% empty %}
+      <li>There are no entries for the topic yet.</li>
+    {% endfor %}
+  </ul>
+
+{% endblock content %}
+```
+
+这样，topic 下所有条目的展示也就完成了，接着可以在 topics 模板里面加入超链接，用于跳转到 topic 页面
+
+进入 templates/my_sites/topics.html，修改内容为：
+
+```html
+{% extends 'my_sites/base.html' %}
+
+{% block content %}
+  <p>Topic: {{ topic.text }}</p>
+
+  <ul>
+    {% for entry in entries %}
+      <li>
+        <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+        <p>{{ entry.text|linebreaks }}</p>
+      </li>
+    {% empty %}
+      <li>There are no entries for the topic yet.</li>
+    {% endfor %}
+  </ul>
+
+{% endblock content %}
+```
+
+好了，这样一个拥有 Topic 和 Entry 模型的网站的基础已经搭建完成。
